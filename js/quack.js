@@ -1,7 +1,7 @@
 // Quacky jQuery
 // GA Track Event with #event id. 
 jQuery(document).ready(function() {
-    jQuery("#event").each(function() {
+    jQuery("[id^='event']").each(function() {
         var href = jQuery(this).attr("href");
         var target = jQuery(this).attr("target");
         var text = jQuery(this).text();
