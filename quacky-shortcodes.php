@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) )
 exit; 
 // Define plugin file constant
 define( 'DD_PLUGIN_FILE', __FILE__ );
-define( 'DD_PLUGIN_VERSION', '1.2' );
+define( 'DD_PLUGIN_VERSION', '1.3.1' );
 $plugin_url = WP_PLUGIN_DIR . '/' . basename(dirname(__FILE__));
  
 // Register style sheet.
