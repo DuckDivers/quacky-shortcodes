@@ -1,0 +1,3 @@
+<?php
+// Duck Duck Goose
+?>
