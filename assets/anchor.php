@@ -29,6 +29,7 @@ define('ESSLPluginOptions_NICK', 'Anchor Settings');
 		{
 			register_setting(ESSLPluginOptions_ID.'_options', 'enable_essl_aggressive');
 			register_setting(ESSLPluginOptions_ID.'_options', 'essl_speed');
+			register_setting(ESSLPluginOptions_ID.'_options', 'essl_active');
 			register_setting(ESSLPluginOptions_ID.'_options', 'essl_offset');
 			register_setting(ESSLPluginOptions_ID.'_options', 'essl_easing');
 			register_setting(ESSLPluginOptions_ID.'_options', 'essl_exclude_begin_1');
@@ -90,6 +91,8 @@ define('ESSLPluginOptions_NICK', 'Anchor Settings');
 		
 	}
 	
+	if (get_option('essl_active')){
+	
 	if ( !is_admin() )
 	{
 		add_action('wp_footer', 'essl_script',100);
@@ -131,5 +134,6 @@ define('ESSLPluginOptions_NICK', 'Anchor Settings');
 			</script>				
 				<?php
 		}					
-	}	
+	}
+}
 endif;
