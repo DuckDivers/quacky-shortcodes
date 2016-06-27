@@ -2,7 +2,7 @@
 /*
   	Plugin Name: Quacky Shortcodes
   	Plugin URI: http://www.duckdiverllc.com/
-  	Version: 1.3.2
+  	Version: 1.3.3
   	Author: Howard E
   	Description: Some Essential Shortcodes for Wordpress.  Also includes installation of FontAwesome 4.4.0, Customized Tag Cloud, Wide Container
 	License:           GNU General Public License v3
