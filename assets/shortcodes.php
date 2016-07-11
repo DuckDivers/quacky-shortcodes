@@ -1,6 +1,19 @@
 <?php 
 //* The Shortcodes *//
 
+//Anti-Spambot Mailto
+function dd_secure_mail($atts) {
+	extract(shortcode_atts(array(
+		"mailto" => '',
+		"txt" => ''
+	), $atts));
+	$mailto = antispambot($mailto);
+	$txt = antispambot($txt);
+	return '<a href="mailto:' . $mailto . '">' . $txt . '</a>';
+}
+
+add_shortcode('mailto', 'dd_secure_mail');
+
 // Cool Icon
 function cool_icon_shortcode($atts, $content = null) {
 	extract( shortcode_atts( array(
