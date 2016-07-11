@@ -1,4 +1,6 @@
 # quacky-shortcodes
 Collection of personal shortcodes 
 
-#### V 1.3.4 #### 
+[mailto] [spacer] and more.
+
+#### V 1.3.4 
