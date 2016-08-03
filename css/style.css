@@ -135,7 +135,7 @@ a.duck {
 	font-size: .4em;
 	font-style: italic;
 }
-.list.styled > ul li:before {
+.list.styled.dive-flag>ul li:before {
     content: '\e701';
     font-family: duckdiver;
     color: #D71010;
