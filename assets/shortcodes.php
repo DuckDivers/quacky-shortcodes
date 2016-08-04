@@ -134,18 +134,7 @@ function dive_flag_list_shortcode($atts, $content = null) {
 	}
 add_shortcode('dive_flag_list', 'dive_flag_list_shortcode');
 
-// ADD DIV Shortcode
-function div_shortcode($atts, $content = null){
-	extract (shortcode_atts (array(
-		'class' => ''
-	), $atts ));
-		$output =  '<div class="'.$class.'">';
-		$output .= $content;
-		$output .= '</div>';
-		return $output;
-		}
-add_shortcode('div', 'div_shortcode');
-	/*   page_anchor_SHORTCODE    */
+/*   page_anchor_SHORTCODE    */
 function page_anchor_shortcode($atts, $content = null) {
 		extract(shortcode_atts(array(
 				'hash'  => ''
