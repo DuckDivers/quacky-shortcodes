@@ -142,6 +142,40 @@
 								});
 							}
 						},
+						{
+							text: 'AntiSpambot Mailto',
+							onclick: function() {
+								editor.windowManager.open( {
+									title: 'AntiSpamBot Mailto Email Link',
+									body: [
+										{
+											type: 'textbox',
+											name: 'mailto',
+											label: 'E-Mail Address:',
+											value: ''
+										},
+										{
+											type:'container',
+											html:'<p class="help">Enter the E-Mail Address for the mailto part of the link.</p>'
+										},
+										{
+											type: 'textbox',
+											name: 'mailtotxt',
+											label: 'Text to Display:',
+											value: ''
+										},
+										{
+											type:'container',
+											html:'<p class="help">Enter the text to display in the link that people click on.</p>'
+										},
+									],
+									
+									onsubmit: function( e ) {
+										editor.insertContent( '[mailto mailto="' + e.data.mailto + '" txt="' + e.data.mailtotxt + '"]');
+									}
+								});
+							}
+						},
 										{
 							text: 'Text Box',
 							onclick: function() {

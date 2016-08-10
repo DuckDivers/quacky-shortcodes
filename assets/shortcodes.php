@@ -11,7 +11,6 @@ function dd_secure_mail($atts) {
 	$txt = antispambot($txt);
 	return '<a href="mailto:' . $mailto . '">' . $txt . '</a>';
 }
-
 add_shortcode('mailto', 'dd_secure_mail');
 
 // Cool Icon
