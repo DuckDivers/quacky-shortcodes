@@ -122,8 +122,9 @@ define('ESSLPluginOptions_NICK', 'Anchor Settings');
 						$(document).ready(function() {
 								function scrollToAnchor(aid){
 									var aTag = $("a[name='"+ aid +"']");
+										if (aTag.length){
 									$('html,body').animate({scrollTop: aTag.offset().top - <?php if (get_option('essl_offset')!='') {echo get_option('essl_offset');} else {echo '20';} ?>}, <?php if (get_option('essl_speed')!='') {echo get_option('essl_speed');} else {echo '900';} ?>);
-								}
+								}}
 									$("a").click(function() {
 									var href = $(this).attr('href').replace('#', '');
 									scrollToAnchor(href);
