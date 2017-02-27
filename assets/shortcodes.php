@@ -117,9 +117,10 @@ function dd_fontawesome_shortcode ($atts) {
 	extract (shortcode_atts( array(
 		'icon' => '',
 		'size' => '14',
-		'color' => '#000'
+		'color' => '#000',
+		'type' => 'fa'
 	), $atts ) );
-	$output = '<i class="fa '. $icon .'" style="font-size:  '. $size .'px; color: '. $color .';"></i>';
+	$output = '<i class="'.$type.' '. $icon .'" style="font-size:  '. $size .'px; color: '. $color .';"></i>';
 	
 return $output;
 	}
