@@ -22,6 +22,7 @@ class duckdivertag_Widget extends WP_Widget {
          
         $title      = apply_filters( 'widget_title', $instance['title'] );
         $number    = $instance['number'];
+		$exclude   = $instance['exclude'];
          
         echo $before_widget;
          
@@ -33,13 +34,13 @@ class duckdivertag_Widget extends WP_Widget {
 		<!-- BEGIN Tag Cloud -->
 		
 		<div class="tagcloud">
-        
         <?php if ( function_exists( 'wp_tag_cloud' ) ) : ?>
             <ul style="list-style: none;">
             <li><?php wp_tag_cloud( array(
 				'number' => $number,
 				'order' => 'RAND',
-				'orderby' => 'count'
+				'orderby' => 'count',
+				'exclude' => $exclude 
 				) ); ?></li>
             </ul>
             <?php endif; ?>
@@ -60,12 +61,14 @@ class duckdivertag_Widget extends WP_Widget {
       *
       * @return array Updated safe values to be saved.
       */
+
     public function update( $new_instance, $old_instance ) {        
          
         $instance = $old_instance;
          
         $instance['title'] = strip_tags( $new_instance['title'] );
         $instance['number'] = strip_tags( $new_instance['number'] );
+		$instance['exclude'] = strip_tags( $new_instance['exclude']);
          
         return $instance;
          
@@ -78,10 +81,12 @@ class duckdivertag_Widget extends WP_Widget {
       *
       * @param array $instance Previously saved values from database.
       */
+
     public function form( $instance ) {    
      
         $title      = esc_attr( $instance['title'] );
         $number    = esc_attr( $instance['number'] );
+		$exclude  = esc_attr ($instance ['exclude'] );
         ?>
          
         <p>
@@ -92,6 +97,11 @@ class duckdivertag_Widget extends WP_Widget {
             <label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of Tags'); ?></label> 
             <textarea class="widefat" rows="1" cols="6" id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>"><?php echo $number; ?></textarea>
         </p>
+                <p>
+            <label for="<?php echo $this->get_field_id('exclude'); ?>"><?php _e('Exclude: <small>Comma Separated List</small>'); ?></label> 
+            <input class="widefat" id="<?php echo $this->get_field_id('exclude'); ?>" name="<?php echo $this->get_field_name('exclude'); ?>" type="text" value="<?php echo $exclude; ?>" />
+        </p>
+
      	
     <?php 
     }

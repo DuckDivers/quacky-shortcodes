@@ -2,7 +2,7 @@
 /*
   	Plugin Name: Quacky Shortcodes
   	Plugin URI: http://www.duckdiverllc.com/
-  	Version: 1.3.6.3
+  	Version: 1.4
   	Author: Howard E
   	Description: Some Essential Shortcodes for Wordpress.  Also includes installation of FontAwesome 4.4.0, Customized Tag Cloud, Wide Container
 	License:           GNU General Public License v3
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) )
 exit; 
 // Define plugin file constant
 define( 'DD_PLUGIN_FILE', __FILE__ );
-define( 'DD_PLUGIN_VERSION', '1.3.6.3');
+define( 'DD_PLUGIN_VERSION', '1.4');
 $plugin_url = WP_PLUGIN_DIR . '/' . basename(dirname(__FILE__));
  
 // Register style sheet.
@@ -27,7 +27,7 @@ add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
  */
 function register_plugin_styles() {
 	wp_register_style( 'quacky-plugin', plugins_url( 'quacky-shortcodes/css/style.min.css', false, '1.0', 'all' ) );
-	wp_register_style( 'font-awesome-4', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', false, '4.4.0', 'all' );	
+	wp_register_style( 'font-awesome-4', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', false, '4.7.0', 'all' );	
 	wp_enqueue_style( 'quacky-plugin' );
 	wp_enqueue_style( 'font-awesome-4' );
 }
