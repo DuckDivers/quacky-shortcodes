@@ -35,7 +35,7 @@ function space_shortcode( $atts, $content = null ) {
 		'height' => '',
 	), $atts ) );
 
-	return '<span class="space" style="height:' . $height . 'px;"></span>';
+	return '<div class="space" style="height:' . $height . 'px;"></div>';
 }
 add_shortcode('space', 'space_shortcode');
 
