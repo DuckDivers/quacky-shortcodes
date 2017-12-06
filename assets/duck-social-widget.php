@@ -99,7 +99,7 @@ array( 'description' => __( 'Duck Diver Links to your Networks', 'duck_widget_do
 
 	function form( $instance ) {
 		/* Set up some default widget settings. */
-		$defaults = array( 'title' => '', 'twitter' => '', 'twitter_label' => '', 'facebook' => '', 'facebook_label' => '', 'flickr' => '', 'flickr_label' => '', 'rss' => '', 'rss_label' => '', 'linkedin' => '', 'linkedin_label' => '', 'instagram' => '', 'instagram_label' => '', 'youtube' => '', 'youtube_label' => '', 'pinterest' => '', 'pinterest_label' => '', 'google' => '', 'google_label' => '', 'vimeo' => '', 'vimeo_label' => '' , 'tumblr_label' => '', 'display' => 'icons', 'text' => '');
+		$defaults = array( 'title' => '', 'twitter' => '', 'twitter_label' => '', 'facebook' => '', 'facebook_label' => '', 'flickr' => '', 'flickr_label' => '', 'rss' => '', 'rss_label' => '', 'linkedin' => '', 'linkedin_label' => '', 'instagram' => '', 'instagram_label' => '', 'youtube' => '', 'youtube_label' => '', 'pinterest' => '', 'pinterest_label' => '', 'google' => '', 'google_label' => '', 'vimeo' => '', 'vimeo_label' => '' , 'tumblr' =>'' , 'tumblr_label' => '', 'display' => 'icons', 'text' => '');
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
 		$twitter         = $instance['twitter'];
