@@ -84,9 +84,10 @@ class duckdivertag_Widget extends WP_Widget {
 
     public function form( $instance ) {    
      
-        $title      = esc_attr( $instance['title'] );
-        $number    = esc_attr( $instance['number'] );
-		$exclude  = esc_attr ($instance ['exclude'] );
+        $title    = (isset ($instance['title'] ) ) ? esc_attr( $instance['title'] ) : '';
+        $number   = (isset ($instance['number'] ) ) ? esc_attr( $instance['number'] ) : '';
+	$exclude  = (isset ($instance['exclude'] ) ) ? esc_attr ($instance ['exclude'] ) : '';
+
         ?>
          
         <p>
