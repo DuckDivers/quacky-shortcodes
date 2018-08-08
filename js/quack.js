@@ -18,7 +18,7 @@ jQuery(document).ready(function() {
 	jQuery('[data-toggle="tooltip"]').tooltip();
 
 });
-jQuery(function($) {
+(function($) {
 	"use strict";
 		var windowwidth = $(window).width();
 		var margin = windowwidth - $('#content').width();
