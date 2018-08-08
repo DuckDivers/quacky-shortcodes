@@ -1,10 +1,11 @@
 // Quacky jQuery
 // GA Track Event with #event id. 
 jQuery(document).ready(function() {
-    jQuery("[id^='event']").each(function() {
+	"use strict";
+    jQuery("[data-track='event']").each(function() {
         var href = jQuery(this).attr("href");
         var target = jQuery(this).attr("target");
-        var text = jQuery(this).text();
+       // var text = jQuery(this).text();
         jQuery(this).click(function(event) { // when someone clicks these links
             event.preventDefault(); // don't open the link yet
             ga('send', 'event', "Links", "Clicked", href, false); // create a custom event
@@ -13,8 +14,12 @@ jQuery(document).ready(function() {
             },1);
         });
     });
+	
+	jQuery('[data-toggle="tooltip"]').tooltip();
+
 });
 jQuery(function($) {
+	"use strict";
 		var windowwidth = $(window).width();
 		var margin = windowwidth - $('#content').width();
 		var right = (margin / 2) + 15;
@@ -31,4 +36,5 @@ jQuery(function($) {
 			$('.container-wide').css({'width':'100%', 'right':'0', 'position':'relative', 'padding':'0 15px'});
 		}
 	});
-});(jQuery) 
+	
+})(jQuery);
