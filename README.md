@@ -3,7 +3,7 @@ Collection of personal shortcodes
 
 [mailto] [spacer] and more.
 
-#### V 1.3.6 
+#### V 1.4.3
 
 Fixes for PHP 7.2
 
