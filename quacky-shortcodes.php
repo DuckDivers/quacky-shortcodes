@@ -1,16 +1,16 @@
 <?php
 /*
-  	Plugin Name: Quacky Shortcodes
-  	Plugin URI: http://www.duckdiverllc.com/
-  	Version: 1.4.3
-  	Author: Howard E
-  	Description: Some Essential Shortcodes for Wordpress.  Also includes installation of FontAwesome 4.4.0, Customized Tag Cloud, Wide Container
-	License:           GNU General Public License v3
-	License URI:       http://www.gnu.org/licenses/gpl-3.0.html
-	Domain Path:       /languages
-	Text Domain:       quacky-updater
-	GitHub Plugin URI: https://github.com/DuckDivers/quacky-shortcodes
-	GitHub Branch:     master	
+ * 	Plugin Name: Quacky Shortcodes
+ * 	Plugin URI: http://www.duckdiverllc.com/
+ * 	Version: 1.4.3
+ * 	Author: Howard E
+ * 	Description: Some Essential Shortcodes for Wordpress.  Also includes installation of FontAwesome 4.4.0, Customized Tag Cloud, Wide Container
+ *	License:           GNU General Public License v3
+ *	License URI:       http://www.gnu.org/licenses/gpl-3.0.html
+ *	Domain Path:       /languages
+ *	Text Domain:       quacky-updater
+ *	GitHub Plugin URI: https://github.com/DuckDivers/quacky-shortcodes
+ *	GitHub Branch:     master	
  */
 if ( ! defined( 'ABSPATH' ) )
 exit; 
