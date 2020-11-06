@@ -27,7 +27,7 @@ add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
  */
 function register_plugin_styles() {
 	wp_register_style( 'quacky-plugin', plugins_url( 'quacky-shortcodes/css/style.min.css', false, '1.0', 'all' ) );
-	wp_register_style( 'font-awesome-4', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', false, '4.7.0', 'all' );	
+	wp_register_style( 'font-awesome-4', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', false, '4.7.0', 'all' );	
 	wp_enqueue_style( 'quacky-plugin' );
 	wp_enqueue_style( 'font-awesome-4' );
 }
